@@ -30,5 +30,7 @@ class HomeFragment : Fragment() {
         view.findViewById<TextView>(R.id.button2).setOnClickListener {
             NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_fun2Fragment)
         }
+
+        view.findViewById<TextView>(R.id.textView3).text = arguments?.getString("data") ?: "no data"
     }
 }

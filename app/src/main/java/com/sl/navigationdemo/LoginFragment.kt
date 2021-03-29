@@ -21,7 +21,10 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         view.findViewById<View>(R.id.textView).setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_homeFragment2)
+            val bundle = Bundle().also {
+                it.putString("data", "Songlin")
+            }
+            findNavController().navigate(R.id.action_loginFragment_to_homeFragment2, bundle)
         }
     }
 }
